@@ -8,3 +8,5 @@ let obj= {
 }
 
 console.log(typeof(obj[sym]));
+
+let symb = Symbol("ss")
