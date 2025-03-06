@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-learnig</title>
+</head>
+<body>
+    <div id="main"></div>
+    <script>
+        function createDiv(text){
+
+            const div = document.createElement('div')
+            div.innerText = text
+            div.style.backgroundColor = 'gray'
+            div.style.color = 'white'
+            div.style.padding = '10px'
+            div.style.margin = '10px'
+            document.body.appendChild(div)
+            div.style.textAlign = 'center'
+        }
+        createDiv("usama jameel")
+        createDiv("Ahmed hussain")
+        createDiv("Shoaib")
+        createDiv("Awais")
+
+       
+
+        const main = document.getElementById('main')
+        main.style.backgroundColor = 'red'
+
+            const h1 = document.createElement('h1')
+            h1.innerText = 
+            h1.style.color = 'red'
+            document.main.appendChild(h1)
+       
+    </script>
+</body>
+</html>
