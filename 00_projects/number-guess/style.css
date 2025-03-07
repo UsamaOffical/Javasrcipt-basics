@@ -1,0 +1,44 @@
+body{
+    background-color: rgb(106, 107, 107);
+}
+.wrapper{
+    width: 80vw;
+    max-width: 600px;
+    margin: 100px auto;
+    font-family:  monospace;
+    background-color: rgb(54, 53, 61);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 6px 30px rgb(56, 56, 56);
+}
+
+.wrapper p, h1 {
+    text-align: center;
+} 
+.wrapper h1 {
+    color: orange;
+} 
+
+label, input {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: orange;
+}
+input{
+    margin: 10px auto 10px auto;
+    font-size: 14px;  
+    color: black;
+}
+#subt{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(112, 112, 112);
+    color: white;
+}
+#guessField{
+    border: none;
+}
