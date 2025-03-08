@@ -1,7 +1,7 @@
 body{
     background-color: rgb(106, 107, 107);
 }
-.wrapper{
+#wrapper{
     width: 80vw;
     max-width: 600px;
     margin: 100px auto;
@@ -13,10 +13,10 @@ body{
     box-shadow: 1px 6px 30px rgb(56, 56, 56);
 }
 
-.wrapper p, h1 {
+#wrapper p, h1 {
     text-align: center;
 } 
-.wrapper h1 {
+#wrapper h1 {
     color: orange;
 } 
 
