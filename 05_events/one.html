@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="images">
+        <li><img src="/05_events/gold-gym/breathworks-mindful-workout (1).webp" alt="" width="200" id="girl"></li>
+        <li><img src="/05_events/gold-gym/daily-movement.webp" alt="" width="200" id="sleep"></li>
+        <li><img src="/05_events/gold-gym/gym-1.webp" alt="" width="200" id="gym"></li>
+        <li><img src="/05_events/gold-gym/kwabena-hero.webp" alt="" width="200" id="kalaAdmi"></li>
+        <li><img src="/05_events/gold-gym/quad-roll-2-final.webp" alt="" width="200" id="sixpack"></li>
+        <li><img src="/05_events/gold-gym/news_2.webp" alt="" width="200" id="larkiWithChutar"></li>
+    </ul>
+    <script>
+
+
+        document.querySelector('#images').addEventListener('click',()=>{
+            // alert('sab images click hwi')
+            console.log('clicked all images');
+            
+        })
+        document.querySelector('#larkiWithChutar').addEventListener('click',()=>{
+            alert('Chutar wali larki click')
+            console.log('Chutar wali larki click');
+        },true)
+        document.querySelector('#images').addEventListener('click',(e)=>{
+            console.log(e);
+
+            // This code delete the parent node
+            // let removeIt = e.target.parentNode
+            // console.log(e.target.id);
+            // removeIt.remove()
+            if(e.target.tagName === 'IMG'){
+                let removeIt = e.target.parentNode
+                console.log(e.target.id);
+                removeIt.remove()
+            }
+            
+        })
+    </script>
+</body>
+</html>
