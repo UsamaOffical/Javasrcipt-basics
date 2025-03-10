@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>IF you click start button so something Will do!</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+       const randomColor = function (){
+        let color = '0123456789ABCDEF'
+        let hex = '#'
+        
+        for (let i = 0; i < 6; i++) {
+            hex += color[Math.floor(Math.random() *16 )] 
+        }
+        return hex
+       }
+       console.log(randomColor());
+       
+       function changeOfColor(){ 
+           document.body.style.backgroundColor = randomColor()
+       }
+
+       let changing;
+       function startChangeColor(){
+        if(!changing){
+
+            changing = setInterval(changeOfColor,1500)
+        }
+       }
+       
+       function stopChangeColor(){
+        clearInterval(changing)
+        changing = null
+        
+       }
+
+
+       document.querySelector('#start').addEventListener('click',startChangeColor)
+       document.querySelector('#stop').addEventListener('click',stopChangeColor)
+
+    </script>
+</body>
+</html>

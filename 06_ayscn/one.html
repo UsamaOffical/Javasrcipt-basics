@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aysnc</title>
+</head>
+<body>
+    <div id="main">
+        <h1 id="name">Usama jameel</h1>
+        <button id="btn">Click me to print hello world!</button>
+    </div>
+    <script>
+        const name = document.querySelector('#name')
+        const btn = document.querySelector('#btn')
+        const main = document.querySelector('#main')
+
+        
+        btn.addEventListener('click',()=>{
+            const p = document.createElement('p')
+            p.innerHTML = 'Please wait!'
+            main.appendChild(p)
+            setTimeout(() => {  
+                name.innerHTML = 'Hello thanks for clicking me !'
+                main.removeChild(p)
+            }, 2000);
+        })
+    </script>
+</body>
+</html>

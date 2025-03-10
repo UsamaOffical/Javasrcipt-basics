@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello world!</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+  
+    const start = document.querySelector('#start')
+    const stoped = document.querySelector('#stop')
+    // const startMsg = setInterval(() => {
+    //     console.log('hi',Date.now().toLocaleString()); 
+    // }, 1500);
+    function startMsg(){
+        setInterval(() => {
+            console.log('hi',Date.now().toLocaleString()); 
+        }, 1500);
+    }
+    function stopMsg(){
+        clearInterval(startMsg)
+    }
+    start.addEventListener('click',()=>{
+        startMsg()
+    })
+
+    stoped.addEventListener('click',()=>{
+        stopMsg()
+    })
+    
+    
+</script>
+</html>

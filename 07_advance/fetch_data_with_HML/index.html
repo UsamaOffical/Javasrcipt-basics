@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: #2d2d2cfb;
+    }
+    #main{
+        width: 300px;
+        box-shadow: 1px 5px 20px 2px rgb(28, 27, 27);
+        /* border: 2px solid black; */
+        padding: 15px;
+        border-radius: 10px;
+        margin: 20px auto;
+        background : linear-gradient(135deg ,#220606,#3c163c);
+        font-family:Verdana, Geneva, Tahoma, sans-serif
+    }
+    #image_{
+        width: 300px;
+        border-radius: 10px;
+
+    }
+    #image_:hover{
+        transform: scale(1.007);
+    }
+    p{
+        color: white;
+        font-size: 14px;
+        
+        cursor: pointer;
+    }
+    span{
+        cursor: pointer;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div id="main">
+        <img id="image_" alt="image">
+        
+        <p id="name"></p>
+        <p id="bio"></p>
+        <p id="follower"></p>
+    
+    </div>
+</body>
+
+<script>
+    const requestUrl = 'https://api.github.com/users/usamaoffical'
+
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET' ,requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState); 
+        if(xhr.readyState === 4){
+            const data =JSON.parse(this.responseText)
+            console.log(data);  
+            // const image = data.avatar_url
+
+            const image = document.getElementById('image_').setAttribute('src',`${data.avatar_url}`)
+            const p = document.querySelector('#name').innerHTML = `<span>Name :</span> ${data.name}`
+            const bio = document.querySelector('#bio').innerHTML =`<span>BIO :</span> ${data.bio}`
+            const follower = document.querySelector('#follower').innerHTML = `<span>Followers :</span> ${data.followers}`
+          
+
+        }      
+    }
+    xhr.send()
+</script>
+</html> 
+

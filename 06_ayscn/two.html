@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="images">
+        <li class="id"><img src="/pictures/guy-stretch1.webp" alt="" width="300" id="image1"></li>
+        <li class="id"><img src="/pictures/gym-1.webp" alt="" width="300" id="image2"></li>
+        <li class="id"><img src="/pictures/istockphoto-996349204.webp" alt="" width="300" id="image3"></li>
+        <li class="id"><img src="/pictures/logo-gold-gym.webp" alt="" width="300" id="image4"></li>
+        <li class="id"><img src="/pictures/kwabena-hero.webp" alt="" width="300" id="image5"></li>
+       
+    </ul>
+    <script>
+        const ul = document.querySelector('ul')
+        const images =  document.querySelector('.images').addEventListener('click',(e)=>{
+            console.log(e.target.id);
+
+            const removeIt = e.target.parentNode
+
+            if(e.target.tagName === 'IMG'){
+            setTimeout(() => {
+                const p = document.createElement('p')
+                p.innerHTML = 'Delete'
+                ul.appendChild(p)      
+                removeIt.remove()
+                
+            }, 3000);
+            
+            }
+            
+        })
+
+        
+
+
+    </script>
+</body>
+</html>
