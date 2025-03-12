@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .sub_form{
+        background-color: #3232;
+        padding: 20px;
+    }
+    label , input{
+        display: block;
+        margin-top: 5px;
+    }
+    button{
+        margin-top: 10px;
+        padding: 2px 5px;
+    }
+</style>
+<body>
+    <div class="sub_form">
+    <h1>Class submission form</h1>
+    <form id="form">
+
+        <label for="fname">Enter First name
+            <input type="text" name="name" id="fname">
+        </label>
+        <label for="sname">Enter Second name
+        <input type="text" name="sname" id="sname">
+    </label>
+    <label for="email">Enter email
+        <input type="email" name="email" id="email">
+    </label>
+    <label for="phone">Enter phone number
+        <input type="text" name="phone" id="phone">
+    </label>
+    <label for="roll-number">Enter roll number
+        <input type="text" name="roll-number" id="roll-number">
+    </label>
+    <button></button>
+</form>
+</div>
+</body>
+<script>
+
+    const form = document.querySelector('#form')
+    form.addEventListener('click',(e)=>{
+        e.preventDefault()
+        const fName = document.getElementById('fname').value
+        const sName= document.getElementById('sname').value
+        const email = document.getElementById('email').value
+        const phone = document.getElementById('phone').value
+        const rollNumber = document.getElementById('roll-number').value
+        // const body = document.querySelector('body')
+    })
+
+    
+    // const div = document.createElement('div')
+    // div.innerHTML = 'usama'
+    // body.appendChild(div)
+    
+
+</script>
+</html>
